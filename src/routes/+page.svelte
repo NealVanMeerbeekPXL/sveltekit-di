@@ -5,5 +5,6 @@
 </script>
 
 {#each data.d as dma}
-	<h1>{{dma}}</h1>
+<h1>{dma.company}</h1>
+<h2>{dma.name}</h2>
 {/each}

@@ -1,5 +1,5 @@
-import type { IDMA } from "../domain/IDMA";
+import type { DMA } from "../domain/DMA";
 
 export abstract class IDMAService {
-    abstract getAllDMAs(): Promise<IDMA[]>
+    abstract getAllDMAs(): Promise<DMA[]>
 }
