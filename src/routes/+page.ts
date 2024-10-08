@@ -1,8 +1,8 @@
-import type { DMA } from '$lib/server/domain/DMA.js';
+import type { DMAModel } from '$lib/models/DMAModel';
 
 export const load = async ({ fetch }) => {
-	const res = await fetch('/dma');
-	const dmas: DMA[] = await res.json();
+	const res = await fetch('/api/dma');
+	const dmas: DMAModel[] = await res.json();
 
 	return { dmas };
 };
