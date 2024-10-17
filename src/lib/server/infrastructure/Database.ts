@@ -1,4 +1,4 @@
-import type { IDatabase } from "./IDatabase";
+import type { IDatabase } from ".";
 
 export class Database implements IDatabase {
 

@@ -1,7 +1,7 @@
-import { IDatabase } from "./IDatabase";
-import type { IDMARepository } from "../applogic/IDMARepository";
-import { DMA } from "../domain/DMA";
 import { inject, injectable } from "tsyringe";
+import type { IDMARepository } from "../applogic";
+import { DMA } from "../domain";
+import { IDatabase } from "./IDatabase";
 
 @injectable()
 export class DMARepository implements IDMARepository {

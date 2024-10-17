@@ -1,4 +1,4 @@
-import type { DMA } from "../domain/DMA";
+import type { DMA } from "../domain";
 
 export abstract class IDMARepository {
     abstract getData(): Promise<DMA[]>;

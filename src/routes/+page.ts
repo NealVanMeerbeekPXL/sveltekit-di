@@ -1,4 +1,4 @@
-import type { DMAModel } from '$lib/models/DMAModel';
+import type { DMAModel } from "$lib/models";
 
 export const load = async ({ fetch }) => {
 	const res = await fetch('/api/dma');
