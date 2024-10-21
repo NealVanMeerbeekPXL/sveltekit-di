@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    ports:
+    - "5433:5432"
+    volumes:
+    - postgres:/var/lib/postgresql/data
+    environment:
+    - POSTGRES_USER=dma
+    - POSTGRES_PASSWORD=dma
+    - POSTGRES_DB=dma
+
+volumes:
+  postgres:
+    driver: local

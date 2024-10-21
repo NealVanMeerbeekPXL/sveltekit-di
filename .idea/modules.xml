@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/svelte-test.iml" filepath="$PROJECT_DIR$/.idea/svelte-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/pxl-dma.iml" filepath="$PROJECT_DIR$/.idea/pxl-dma.iml" />
     </modules>
   </component>
 </project>

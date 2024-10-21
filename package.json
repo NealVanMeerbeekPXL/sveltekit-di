@@ -1,35 +1,27 @@
 {
-	"name": "svelte-test",
-	"version": "0.0.1",
-	"private": true,
-	"scripts": {
-		"dev": "vite dev",
-		"build": "vite build",
-		"preview": "vite preview",
-		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
-		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-		"lint": "prettier --check . && eslint .",
-		"format": "prettier --write ."
-	},
-	"devDependencies": {
-		"@abraham/reflection": "^0.12.0",
-		"@sveltejs/adapter-node": "^5.2.6",
-		"@sveltejs/kit": "^2.7.0",
-		"@sveltejs/vite-plugin-svelte": "^4.0.0-next.8",
-		"@types/eslint": "^9.6.0",
-		"eslint": "^9.0.0",
-		"eslint-config-prettier": "^9.1.0",
-		"eslint-plugin-svelte": "^2.36.0",
-		"globals": "^15.0.0",
-		"prettier": "^3.1.1",
-		"prettier-plugin-svelte": "^3.1.2",
-		"prisma": "^5.20.0",
-		"svelte": "^5.0.0-next.262",
-		"svelte-check": "^4.0.0",
-		"tsyringe": "^4.8.0",
-		"typescript": "^5.0.0",
-		"typescript-eslint": "^8.0.0",
-		"vite": "^5.0.3"
-	},
-	"type": "module"
+    "name": "@resultx/dma",
+    "version": "0.0.1",
+    "private": true,
+    "workspaces": [
+        "packages/*"
+    ],
+    "scripts": {
+        "test": "npm run test --workspaces --if-present",
+        "lint": "npm run lint --workspaces --if-present",
+        "lint:fix": "npm run lint:fix --workspaces --if-present",
+        "web:dev": "npm run dev --workspace @resultx/dma-web",
+        "docker:up": "docker compose up -d",
+        "docker:down": "docker compose down",
+        "prisma:generate": "cd packages/dma-core && npx --yes prisma generate",
+        "prisma:migrate-new": "cd packages/dma-core && npx --yes prisma migrate dev --name",
+        "prisma:migrate-up": "cd packages/dma-core && npx --yes prisma db push"
+    },
+    "devDependencies": {
+        "@eslint/js": "^9.10.0",
+        "@stylistic/eslint-plugin": "^2.8.0",
+        "@types/eslint__js": "^8.42.3",
+        "eslint": "^9.10.0",
+        "globals": "^15.9.0",
+        "typescript-eslint": "^8.6.0"
+    }
 }
